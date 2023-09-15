@@ -16,13 +16,12 @@ const fileName = (req: Request, file: Express.Multer.File, callback: (error: Err
 			callback(null, nameFile);
 }
 
-
-
 const imageStorage:multer.StorageEngine = multer.diskStorage({
 	destination: imageDest, // where to store
 	filename: fileName // 
 	}
 );
+
 const spaceFileStorage:multer.StorageEngine = multer.diskStorage({
 	destination: spaceFileDest, // where to store
 	filename: fileName // 

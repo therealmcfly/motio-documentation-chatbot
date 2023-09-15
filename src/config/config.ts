@@ -3,7 +3,8 @@ import dotenv from 'dotenv';
 
 dotenv.config();
 
-const OPENAI_API_KEY = process.env.OPENAI_API_KEY
+const OPENAI_API_KEY = process.env.OPENAI_API_KEY;
+const HF_ACCESS_TOKEN = process.env.HF_ACCESS_TOKEN;
 
 const MYSQL_HOST = process.env.MY_SQL_DB_HOST || 'localhost';
 const MYSQL_DATABASE = process.env.MY_SQL_DB_NAME || 'smartlight-db';
@@ -37,6 +38,7 @@ const SERVER = {
 const config = { 
 	mysql: MYSQL,
 	openai_key: OPENAI_API_KEY,
+	hf_access_token: HF_ACCESS_TOKEN,
 	server: SERVER
  }
 

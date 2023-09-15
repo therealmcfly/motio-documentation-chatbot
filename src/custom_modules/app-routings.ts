@@ -3,6 +3,7 @@ import { Router, Express } from "express";
 import AppRouter from "./app-router";
 
 import userRouter from "../route/user/user-router";
+import chatbotRouter from "../route/chatbot/chatbot-router";
 
 export class AppRouting {
 	private app: Express;
@@ -13,6 +14,7 @@ export class AppRouting {
   public setRoutes() {
     // Add the routing classes.
 		this.addRoute(userRouter);
+		this.addRoute(chatbotRouter);
   }
 
   private addRoute(appRouter: AppRouter) {
